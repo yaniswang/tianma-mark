@@ -42,7 +42,7 @@ var mark = tianma.createPipe({
             var urlIco = 'data:image/ico;base64,' + fs.readFileSync(iconPath).toString('base64');
             response
                 .clear()
-                .write('(function(doc,win){if(win.bSetIcon!==true){win.bSetIcon=true;try{var links=doc.getElementsByTagName("link"),head=doc.getElementsByTagName("head")[0];for(var i=0,l=links.length;i<l;i++){head.removeChild(links[i]);break}var icon=document.createElement("link");icon.type="image/x-icon";icon.rel="icon";icon.href="'+urlIco+'";head.appendChild(icon)}catch(e){}}})(document,window);' + source);
+                .write('(function(doc,win){if(win.bSetIcon!==true){win.bSetIcon=true;try{var links=doc.getElementsByTagName("link"),head=doc.getElementsByTagName("head")[0];for(var i=0,l=links.length;i<l;i++){if(/^(icon|shortcut icon)$/i.test(links[i].getAttribute("rel"))){head.removeChild(links[i]);break}}var icon=document.createElement("link");icon.type="image/x-icon";icon.rel="icon";icon.href="'+urlIco+'";head.appendChild(icon)}catch(e){}}})(document,window);' + source);
 
         }
         
