@@ -1,0 +1,24 @@
+{
+  "name": "tianma-mark",
+  "version": "0.9.1",
+  "description": "Mark pipe for tianma.",
+  "main": "./index",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yaniswang/tianma-mark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yaniswang/tianma-mark/issues"
+  },
+  "keywords": [
+    "tianma",
+    "mark",
+    "favicon"
+  ],
+  "author": "Yanis Wang",
+  "license": "MIT"
+}
