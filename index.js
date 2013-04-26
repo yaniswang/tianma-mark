@@ -26,7 +26,7 @@ var mark = tianma.createPipe({
      * @param response {Object}
      * @return {boolean}
      */
-    fit: function (request, response) {
+    match: function (request, response) {
         return /\/(ae|aelite|atom\-\w+)\.js(\?|$)/i.test(request.path) && response.status() === 200 && response.head('content-type') === 'application/javascript'
     },
 
