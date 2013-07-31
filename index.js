@@ -17,7 +17,8 @@ var mark = pegasus.createPipe({
      * @param config {Object}
      */
     _initialize: function (config) {
-        this.iconPath = config.icon ? config.icon : __dirname + '/dev.ico';
+        var mode = config.mode;
+        this.iconPath = __dirname + '/'+ ( mode ? mode : 'dev' ) + '.ico';
     },
 
     /**
